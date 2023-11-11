@@ -21,4 +21,4 @@ jobs:
       - name: Check version
         run: |
           python --version
-          ls -l /usr/bin
+          gh --version
