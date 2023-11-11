@@ -12,6 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: cimg/python:3.11.5
+      volumes:
+        - /usr/bin/gh
 
     steps:
       - uses: actions/checkout@v3
@@ -19,4 +21,4 @@ jobs:
       - name: Check version
         run: |
           python --version
-          gh --version
+          ls -l /usr/bin/gh
