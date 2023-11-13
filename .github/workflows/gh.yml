@@ -14,11 +14,22 @@ jobs:
       image: cimg/python:3.11.5
       volumes:
         - /usr/bin/gh:/usr/bin/gh
-
+    defaults:
+      run:
+        working-directory: ./.github
+    
     steps:
       - uses: actions/checkout@v3
 
-      - name: Check version
+      - name: step1
         run: |
+          pwd
           python --version
           gh --version
+
+      - name: step1
+        working-directory: .
+        run: |
+          pwd
+          python --version
+          gh --version  
